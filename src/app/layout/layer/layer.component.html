@@ -1,0 +1,21 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <app-siderbar ></app-siderbar>
+  </nz-sider>
+  <nz-layout>
+    <app-header (siderShow)="showCollapsedSider($event)"></app-header>
+    <nz-content style="margin:0 16px;">
+      <nz-breadcrumb style="margin:16px 0;">
+        <nz-breadcrumb-item>User</nz-breadcrumb-item>
+        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div style="padding:24px; background: #fff; min-height: 360px;">
+        Bill is a cat.
+      </div>
+    </nz-content>
+    <app-footer></app-footer>
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i class="anticon anticon-up"></i>
+</ng-template>
